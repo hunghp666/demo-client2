@@ -16,7 +16,7 @@ pipeline {
         stage('Building our image') {
             steps {
                 script {
-                    mvn clean install -Dmaven.skip.test=true
+                    mvn clean install
                 }
             }
         }
