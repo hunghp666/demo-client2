@@ -16,6 +16,14 @@ pipeline {
         stage('Building our image') {
             steps {
                 script {
+                    mvn clean install -Dmaven.skip.test=true
+                }
+            }
+        }
+
+        stage('Building our image') {
+            steps {
+                script {
                     dockerImage = docker.build registry + ":$BUILD_NUMBER"
                 }
             }
