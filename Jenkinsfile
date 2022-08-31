@@ -27,7 +27,8 @@ pipeline {
         stage('Building our image') {
             steps {
                 script {
-                    dockerImage = docker.build registry + ":$BUILD_NUMBER"
+                    //dockerImage = docker.build registry + ":$BUILD_NUMBER"
+                    sh 'docker build -t demo-client1:1.0.0'
                 }
             }
         }
