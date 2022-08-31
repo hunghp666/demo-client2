@@ -13,7 +13,7 @@ pipeline {
             }
         } 
 
-        stage('Building our image') {
+        stage('Maven build') {
             steps {
                 script {
                     mvn clean install
