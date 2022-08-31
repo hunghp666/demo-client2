@@ -4,12 +4,14 @@ pipeline {
         registryCredential = 'dockerhub_id'
         dockerImage = ''
     }
+    // Config tools
     tools {
         maven 'M3'
+        docker
     }
     agent any
     stages {
-        stage('Cloning our Git') {
+        stage('Cloning Git') {
             steps {
                 git 'https://github.com/hunghp666/demo-client2.git'
             }
@@ -22,13 +24,13 @@ pipeline {
                 }
             }
         }
-//         stage('Building our image') {
-//             steps {
-//                 script {
-//                     dockerImage = docker.build registry + ":$BUILD_NUMBER"
-//                 }
-//             }
-//         }
+        stage('Building our image') {
+            steps {
+                script {
+                    dockerImage = docker.build registry + ":$BUILD_NUMBER"
+                }
+            }
+        }
 //
 //         stage('Deploy our image') {
 //             steps {
