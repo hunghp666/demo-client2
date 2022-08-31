@@ -7,7 +7,7 @@ pipeline {
     // Config tools
     tools {
         maven 'M3'
-        docker 'docker'
+        dockerTool 'docker'
     }
     agent any
     stages {
