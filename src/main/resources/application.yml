@@ -1,0 +1,37 @@
+server:
+  port: 8080
+#  http2:
+#    enabled: true
+#  tomcat:
+#    basedir: ./var/log
+#    accesslog:
+#      enabled: true
+#      pattern: "%t %a %r %s %{User-Agent}i %H %D"
+#      rotate: true
+#  ssl:
+#    key-store-type: PKCS12
+#    key-store: classpath:wso2carbon.jks
+#    key-store-password: wso2carbon
+#    key-alias: wso2carbon
+#security:
+#  require-ssl: false
+#spring:
+#  profiles:
+#    active: local
+#  application:
+#    name: mock-service
+##tomcat:
+##  ajp:
+##    port: 7092
+##    secret: ajpsecret
+#feign:
+#  client:
+#    config:
+#      default:
+#        connectTimeout: 5000
+#        readTimeout: 5000
+#        loggerLevel: full
+#  okhttp:
+#    enabled: true
+#  httpclient:
+#    enabled: false
