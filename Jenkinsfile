@@ -4,7 +4,9 @@ pipeline {
         registryCredential = 'dockerhub_id'
         dockerImage = ''
     }
-
+    tools {
+        maven 'M3'
+    }
     agent any
     stages {
         stage('Cloning our Git') {
